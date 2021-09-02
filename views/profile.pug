@@ -1,0 +1,29 @@
+.profile
+  .profile_wrapper
+    img(src='./public/img/profile.png' alt='profile_image')
+    .name #{profile.name}
+    .introduce #{profile.introduce}
+  .info
+    -var email = "mailto:" + profile.email 
+    -var instagram = "https://www.instagram.com/" + profile.instagram 
+    -var github = "https://www.github.com/" + profile.github.id
+    .email
+      | Email
+      br
+      a(href=email)
+        p #{profile.email}
+    .intagram
+      | Instagram
+      br
+      a(href=instagram)
+        p #{profile.instagram}
+    .github
+      | Github
+      br
+      a(href=github)
+        p #{profile.github.address}
+
+#github_title Github Repository
+#github
+  include ../views/githubRepos.pug
+script(type='text/javascript' src='./public/script/viewRepository.js')

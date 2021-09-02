@@ -1,0 +1,13 @@
+-var categoryKeys = Object.keys(categories)
+
+each category in categoryKeys 
+  -var sector = categories[category]
+  .sector 
+    .category #{category}
+      each post in sector
+        ul
+          -var url = 'post?id=' + post.id;
+          a(href=url)
+            li.post_category
+              div #{post.title}
+              div #{post.date}

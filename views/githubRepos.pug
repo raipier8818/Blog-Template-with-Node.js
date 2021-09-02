@@ -1,0 +1,8 @@
+each repo in repolist 
+    -var url = repo.html_url;
+    #repos
+        #name(style='height: 30px;')
+            a(href=url) #{repo.name}
+        #des(style='height: 30px; font-size: 15px;') #{repo.description == null ? " " : repo.description}
+        #language
+        

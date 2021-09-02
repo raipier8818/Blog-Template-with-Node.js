@@ -1,0 +1,26 @@
+#post_menu
+  #countPosts 
+    -var count = Object.keys(postListObj).length;
+    if count == 1
+      p 1 post
+    else
+      p #{count} posts
+  #createBtn
+    a(href="createPost")  
+      img(src="../public/img/create.png", alt="create post")
+  #editBtn 
+    img(src="../public/img/edit.png", alt="edit post")
+
+ol.post_list(style='grid-template-rows: repeat(10,1fr);')
+  -var length = Object.keys(postListObj)
+  -for(var i = 0; i < Object.keys(postListObj).length; i++)
+    -var postKey = Object.keys(postListObj)[i]
+    -var url = `post?id=` + postListObj[postKey].id;
+
+      a(href=url) 
+        li.post      
+          .category #{postListObj[postKey].category}
+          .post_title #{postListObj[postKey].title}
+          .time #{postListObj[postKey].date}
+
+script(src="../public/script/eventHandler.js") 

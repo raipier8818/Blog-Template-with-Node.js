@@ -1,0 +1,33 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Lake&apos;s Blog
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='../public/css/index.css')
+.header
+  include header.pug
+
+if pageName == "login"
+  include login
+else if pageName == "register"
+  include register
+else
+  .wrapper
+    include nav.pug
+    .body
+      if pageName == "profile"
+        include profile
+      else if pageName == "postList"
+        include postList
+      else if pageName == "post"
+        include post
+      else if pageName == "category"
+        include category
+      else if pageName == "createPost"
+        include createPost
+      else if pageName == "main"
+        include main
+.footer
+  include footer

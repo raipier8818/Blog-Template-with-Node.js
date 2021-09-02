@@ -1,0 +1,29 @@
+
+script
+  include ..\public\script\register.js
+
+#login-page  
+
+  form(name='register' action='/register' method='POST' onsubmit="return checkForm()")
+    #login(style="height:auto")
+      p Register
+
+      #tooltip 
+        span 4~30 characters
+      input#username(type='text' name='userId' placeholder='username')
+      
+      #tooltip 
+        span someone@example.com
+      input#email(type='email' name='email' placeholder='email')
+      
+      #tooltip 
+        span 8~30 characters
+      input#password(type='password' name='userPassword' placeholder='password' )
+      
+      #tooltip 
+        span password confirm
+      input#confirmPassword(type='password' name='confirmPassword' placeholder='confirm password' )
+      
+      
+      br
+      input#loginBtn(type='submit' value='Register')

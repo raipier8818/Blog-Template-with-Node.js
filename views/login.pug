@@ -1,0 +1,15 @@
+#login-page
+  form(action='/login' method='POST')
+    #login
+      p Sign In
+      input#username(type='text' name='userId' placeholder='username')
+      input#password(type='password' name='userPassword' placeholder='password')
+      br
+      input#loginBtn(type='submit' value='Login')
+      p Or login with
+  #extLogin
+    div
+      img(src='../public/img/facebook_login.png' alt='facebook')
+    div
+      img(src='../public/img/google_login.png' alt='google')
+  a#signUp(href='/register') Register

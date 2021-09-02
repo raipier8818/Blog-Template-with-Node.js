@@ -1,0 +1,34 @@
+.nav
+  table
+    td
+      a(id="loginNav" href='javascript:void(0)') Log In
+    td
+      a(href='profile') Profile
+    td
+      a(href='post') Posts
+    td
+      a(href='category') Category
+  script(src='//code.jquery.com/jquery-3.6.0.min.js')
+  script.
+    var headHeight = 354
+    onscroll = function(){
+      var scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+      //console.log(scrollPos);
+      if(scrollPos > headHeight){
+          $('.nav').css("position", "fixed");
+          $('.nav').css("top", "0");
+          $('.nav').css("height", "60");
+          $('.nav table').css("transform", "scale(0.8)");
+      }
+      else{
+          $('.nav').css("height", "80");
+          $('.nav').css("position", "relative");
+          $('.nav table').css("transform", "scale(1,1)");
+      }
+    }
+    onscroll(); 
+
+    document.getElementById('loginNav').addEventListener("click", function() {
+      alert('Login is unavailable now');
+
+    })

@@ -1,0 +1,27 @@
+{
+    "main" :{
+        "title": "Blog Title",
+        "description": "Blog Description"
+    },
+
+    "database" :{
+        "host": "",
+        "user": "",
+        "password": "",
+        "database": ""
+    },
+    
+    "profile" : {
+        "name" : "Profile Name",
+        "introduce"  : "Profile Introduce",
+        "email" : "Email",
+        "instagram" : "Instagram ID",
+        "github" : {
+            "address": "Github Address",
+            "id" : "Github ID"
+        }
+    },
+    "address" : "Address you are hosting",
+    "static" : "/public",
+    "port" : 8080
+}

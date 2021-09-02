@@ -1,0 +1,15 @@
+#createPost 
+  form(action="/createPost" method="POST")
+    input#postTitle(type="text" name="postTitle" placeholder="Title")
+    #createPostNav  
+      input#postDate(type="text", name="postDate" placeholder="YYYY-MM-DD")
+      select#categoryOption(name="category" placeholder="category")
+        -var length = categories.length;
+        -for(var i = 0; i < length; i++)
+          option(value=categories[i]) #{categories[i]}
+        option(value="direct") Add New Category 
+      input#directCategory(type="text", name="directCategory")
+    textarea#postContent(name="postContent", cols="", rows="" placeholder="Write in Markdown format" value="") 
+    input#postSave(type="submit" value="Save")
+
+script(src="../public/script/createPost.js") 
