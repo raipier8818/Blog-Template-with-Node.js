@@ -1,27 +1,12 @@
 # Blog Template using Javascript
 
-## Environment
-
-### Device Version
-
- - OS : Window 10, Window 11
- - CPU : Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz  1.50 GHz
- - RAM : 16.0GB
-
-### Program Version - Please check `package.json`
- - NodeJS : 14.7.3
- - npm : 6.14.13
- - pm2 : 5.1.0
-
-----
-
 ## Configuration
 
 ### post
  - You can write your post using `Markdown`(.md) in this folder in proper form
 <br>
 
-####  You must write this header in your post
+####  You must write this header in your post (`post` directory)
 
 ```
 ---
