@@ -27,37 +27,37 @@ app.get('/', function (req, res) {
     res.render('index', {main: info.main, pageName: "main"})
 })
 
-app.get('/login', function(req, res) {
+// app.get('/login', function(req, res) {
         
-    res.redirect('/');
+//     res.redirect('/');
 
-    res.render('index', {pageName: 'login', main: info.main})
-})
+//     res.render('index', {pageName: 'login', main: info.main})
+// })
 
-app.post('/login', function(req, res) {
-    // console.log(req.body);
+// app.post('/login', function(req, res) {
+//     // console.log(req.body);
 
-    var user = {
-        "username":req.body.userId,
-        "password":req.body.userPassword,
-    }
+//     var user = {
+//         "username":req.body.userId,
+//         "password":req.body.userPassword,
+//     }
 
-    res.redirect('/');
-})
+//     res.redirect('/');
+// })
 
-app.get('/register', function(req, res) {
-    res.render('index', {pageName: 'register', main: info.main})
-})
+// app.get('/register', function(req, res) {
+//     res.render('index', {pageName: 'register', main: info.main})
+// })
 
-app.post('/register', function (req, res) {
-    // var connection = mysql.createConnection(info.database)
+// app.post('/register', function (req, res) {
+//     // var connection = mysql.createConnection(info.database)
 
-    // connection.connect()
+//     // connection.connect()
 
     
 
-    // res.redirect('/');
-})
+//     // res.redirect('/');
+// })
 
 app.get('/profile', function (req, res) {
     const authOptions = { use: info.profile.github.id, token: process.env.TOKEN}
